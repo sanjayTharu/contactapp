@@ -1,0 +1,15 @@
+{% extends 'contacts/base.html' %}
+{% block content %}
+
+</br>
+<div>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h1>Upload a contact</h1>
+            {{form.as_p}}
+            <button type="submit" class="btn btn-outline-info">Upload</button>
+            
+    </form>
+</div>
+
+{% endblock %}

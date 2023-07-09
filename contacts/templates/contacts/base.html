@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% load static %}
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a href="{% url 'contact-list' %}" class="navbar-brand">Contact App</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-nav">
+                <div class="nav-item ml-auto">
+                    <a href="{% url 'contact-create' %}" class="nav-item nav-link">New Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container" id="app">
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+</body>
+</html>
